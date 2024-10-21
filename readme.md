@@ -1,47 +1,55 @@
-**Problem Statement:**
+# Problem Statement
+**Title:** Enhancing Product Insights and Customer Experience in Retail through Data Modeling and NLP
 
-As a data scientist at an e-commerce company, you've been tasked with improving the product recommendation system and pricing strategy. The company wants to leverage its vast database of product information, customer reviews, and pricing data to achieve the following goals:
+#### Background: 
+In the competitive retail market, understanding customer feedback and optimizing product offerings are crucial for driving sales and customer satisfaction. This workshop will demonstrate how to build a basic end-to-end data modeling pipeline using a retail dataset. The dataset consists of various electronic products, including details such as product names, prices, ratings, and user reviews.
 
-1. Develop a simple but effective product recommendation system.
-2. Analyze customer sentiment to understand product reception.
-3. Optimize pricing strategies based on product features and customer feedback.
+#### Objective: 
+The goal is to analyze product reviews to extract valuable insights using Natural Language Processing (NLP) techniques. We will demonstrate how to preprocess the data, create a simple predictive model, and derive actionable insights from customer sentiments.
 
-You have access to a dataset containing information about various products, including their descriptions, prices, discounts, and customer reviews. Your challenge is to build an end-to-end data analysis pipeline that addresses these goals and provides actionable insights for the business.
+### Dataset Description:
+The dataset contains the following columns:
 
-**Dataset:**
-The dataset includes the following key features:
-- product_id, product_name, category
-- discounted_price, actual_price, discount_percentage
-- rating, rating_count
-- about_product (description)
-- review_title, review_content
-- user_id, user_name
+```
+product_id: Unique identifier for each product.
+product_name: Name of the product.
+category: Category of the product.
+discounted_price: Current discounted price.
+actual_price: Original price.
+discount_percentage: Percentage of discount.
+rating: Average rating given by customers.
+rating_count: Number of ratings received.
+about_product: Description and features of the product.
+user_id: Unique identifier for users who provided reviews.
+user_name: Names of users who provided reviews.
+review_id: Unique identifier for each review.
+review_title: Title of the review.
+review_content: Main content of the review.
+img_link: Link to an image of the product.
+product_link: Link to the product page.
+```
 
-**Tasks:**
+# End-to-End Solution Outline
 
-1. **Data Preprocessing and Exploration:**
-   - Load and clean the dataset
-   - Perform basic exploratory data analysis
-   - Handle missing values and outliers
 
-2. **Feature Engineering:**
-   - Extract relevant features from the text data (product descriptions and reviews)
-   - Create numerical features for the recommendation system and pricing analysis
+**Data Exploration**
+- Load the dataset.
+- Examine the structure and contents of the data.
+- Identify any missing or inconsistent data.
 
-3. **Sentiment Analysis:**
-   - Implement a simple sentiment analysis model on the review data
-   - Analyze the relationship between sentiment and product ratings
+**Data Preprocessing**
+- Handle missing values.
+- Translate non-English reviews to English (if applicable).
+- Normalize and clean text data (e.g., removing special characters, lowercasing).
 
-4. **Product Recommendation System:**
-   - Develop a basic collaborative filtering recommendation system
-   - Evaluate the system's performance using appropriate metrics
+**Sentiment Analysis**
+- Use an NLP library (e.g., TextBlob, transformers) to perform sentiment analysis on the review_content column.
+- Categorize reviews into positive, neutral, or negative sentiments.
+Visualization
+- Create visualizations to show the distribution of sentiments and their relationship with product ratings and prices.
 
-5. **Pricing Analysis:**
-   - Analyze the relationship between product features, sentiment, and pricing
-   - Build a simple model to suggest optimal discount percentages
+**Modeling**
+- Build a simple machine learning model to predict product ratings based on review content and other features using a neural network (e.g., Keras).
 
-6. **Insights and Recommendations:**
-   - Summarize key findings from the analysis
-   - Provide actionable recommendations for the business
-
-The solution should be implemented in Python and designed to run efficiently on Google Colab. The entire analysis pipeline should be executable within a 20-minute timeframe.
+**Insights and Conclusion**
+- Summarize key findings and actionable insights derived from the analysis.
